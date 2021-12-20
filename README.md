@@ -4,6 +4,7 @@ Laravel8 React Inertia &amp; Typescript Single Page Application
 we will create CRUD application using Laravel Inertia Js with reactjs. Inertia JS is use for create SPA. 
 
 ### Step 1: Install Laravel & Connect Database 
+
 composer create-project laravel/laravel inertia-react
 #### .env
 ```
@@ -15,6 +16,7 @@ DB_USERNAME=database_user_name
 DB_PASSWORD=database_password
 ```
 ### Step 2: Install Breeze & Setup Inertia Js React
+
 ``` composer require laravel/breeze --dev 
     php artisan breeze:install
     php artisan breeze:install react
@@ -22,10 +24,10 @@ DB_PASSWORD=database_password
 ```
 
 ### Step 3: Create Post Model and Resource Controller 
+
 ``` php artisan make:model Post -mcr ```
 
 app/database/migrations/posts_table.php
-
 ```
 <?php
 
@@ -84,9 +86,9 @@ class Post extends Model
 
 ### Step 4: Create Post Request
 
-#### php artisan make:request StorePostRequest
-app/Http/Requests/StorePostRequest.php
+``` php artisan make:request StorePostRequest ```
 
+app/Http/Requests/StorePostRequest.php
 ```
 <?php
 
@@ -121,8 +123,7 @@ class StorePostRequest extends FormRequest
 }
 ```
 
-#### PostController.php
-
+PostController.php
 ```
 <?php
 
@@ -231,8 +232,7 @@ class PostController extends Controller
 
 ```
 
-#### app/routes/web.php
-
+app/routes/web.php
 ```
 <?php
 
@@ -271,8 +271,7 @@ require __DIR__.'/auth.php';
 
 ### Step 5: Create React js view file for CRUD
 
-#### app/resources/js/Pages/Post/Create.js
-
+app/resources/js/Pages/Post/Create.js
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
@@ -359,8 +358,7 @@ const Create = () => {
 export default Create;
 ```
 
-#### app/resources/js/Pages/Post/Index.js
-
+app/resources/js/Pages/Post/Index.js
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
@@ -453,8 +451,7 @@ const Index = () => {
 export default Index;
 ```
 
-#### app/resources/js/Pages/Post/Edit.js
-
+pp/resources/js/Pages/Post/Edit.js
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
