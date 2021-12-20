@@ -1,4 +1,5 @@
-# laravel8reactinertiaspa
+# laravel8 React Indertia & Typescript Single Page Application
+
 Laravel8 React Inertia &amp; Typescript Single Page Application
 
 we will create CRUD application using Laravel Inertia Js with reactjs. Inertia JS is use for create SPA. 
