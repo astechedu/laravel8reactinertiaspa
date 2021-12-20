@@ -1,3 +1,4 @@
+![](https://avatars.githubusercontent.com/u/75734516?s=48&v=4) 
 # laravel8 React Indertia & Typescript Single Page Application
 
 Laravel8 React Inertia &amp; Typescript Single Page Application
@@ -558,4 +559,5 @@ Now run:
 npm run watch 
 ```
 
+:+1:
 
