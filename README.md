@@ -19,15 +19,17 @@ DB_PASSWORD=database_password
 ```
 ### Step 2: Install Breeze & Setup Inertia Js React
 
-``` composer require laravel/breeze --dev 
-    php artisan breeze:install
-    php artisan breeze:install react
-    npm install && npm run dev 
+```
+composer require laravel/breeze --dev 
+php artisan breeze:install
+php artisan breeze:install react
+npm install && npm run dev 
 ```
 
 ### Step 3: Create Post Model and Resource Controller 
 
-``` php artisan make:model Post -mcr ```
+``` 
+php artisan make:model Post -mcr ```
 
 app/database/migrations/posts_table.php
 ```
@@ -88,7 +90,8 @@ class Post extends Model
 
 ### Step 4: Create Post Request
 
-``` php artisan make:request StorePostRequest ```
+``` 
+php artisan make:request StorePostRequest ```
 
 app/Http/Requests/StorePostRequest.php
 ```
