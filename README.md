@@ -7,7 +7,10 @@ we will create CRUD application using Laravel Inertia Js with reactjs. Inertia J
 
 ### Step 1: Install Laravel & Connect Database 
 
+``` 
 composer create-project laravel/laravel inertia-react
+```
+
 #### .env
 
 ```
