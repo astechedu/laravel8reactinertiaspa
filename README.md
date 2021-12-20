@@ -9,6 +9,7 @@ we will create CRUD application using Laravel Inertia Js with reactjs. Inertia J
 
 composer create-project laravel/laravel inertia-react
 #### .env
+
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -17,6 +18,7 @@ DB_DATABASE=database_name
 DB_USERNAME=database_user_name
 DB_PASSWORD=database_password
 ```
+
 ### Step 2: Install Breeze & Setup Inertia Js React
 
 ```
@@ -29,9 +31,11 @@ npm install && npm run dev
 ### Step 3: Create Post Model and Resource Controller 
 
 ``` 
-php artisan make:model Post -mcr ```
+php artisan make:model Post -mcr 
+```
 
 app/database/migrations/posts_table.php
+
 ```
 <?php
 
@@ -69,6 +73,7 @@ class CreatePostsTable extends Migration
 ```
 
 app/Models/Post.php
+
 ```
 <?php
 
@@ -91,9 +96,11 @@ class Post extends Model
 ### Step 4: Create Post Request
 
 ``` 
-php artisan make:request StorePostRequest ```
+php artisan make:request StorePostRequest 
+```
 
 app/Http/Requests/StorePostRequest.php
+
 ```
 <?php
 
@@ -129,6 +136,7 @@ class StorePostRequest extends FormRequest
 ```
 
 PostController.php
+
 ```
 <?php
 
@@ -238,6 +246,7 @@ class PostController extends Controller
 ```
 
 app/routes/web.php
+
 ```
 <?php
 
@@ -272,11 +281,13 @@ Route::get('/dashboard', function () {
 
 Route::resource('posts', PostController::class);
 require __DIR__.'/auth.php';
+
 ```
 
 ### Step 5: Create React js view file for CRUD
 
 app/resources/js/Pages/Post/Create.js
+
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
@@ -361,9 +372,11 @@ const Create = () => {
 };
 
 export default Create;
+
 ```
 
 app/resources/js/Pages/Post/Index.js
+
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
@@ -454,9 +467,11 @@ const Index = () => {
 };
 
 export default Index;
+
 ```
 
 pp/resources/js/Pages/Post/Edit.js
+
 ```
 import React from "react";
 import { Inertia } from "@inertiajs/inertia";
@@ -555,9 +570,11 @@ const Edit = () => {
 };
 
 export default Edit;
+
 ```
 
 Now run:
+
 ```
 npm run watch 
 ```
